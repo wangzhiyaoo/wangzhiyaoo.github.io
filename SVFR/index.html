@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SVFR: A Unified Framework for Generalized Video Face Restoration">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SVFR: A Unified Framework for Generalized Video Face Restoration</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <!-- <script src="static/js/video.js"></script> -->
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SVFR: A Unified Framework for Generalized Video Face Restoration</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhiyao Wang</a>, -->
+                Zhiyao Wang<sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Xu Chen</a>, -->
+                Xu Chen<sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Chengming Xu,</a> -->
+                Chengming Xu,
+              </span>
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Junwei Zhu,</a> -->
+                Junwei Zhu<sup>†</sup>,
+              </span>    
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiaobin Hu,</a> -->
+                Xiaobin Hu,
+              </span>
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiangning Zhang,</a> -->
+                Jiangning Zhang,
+              </span>
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Chengjie Wang,</a> -->
+                Chengjie Wang,
+              </span>
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yuqi Liu,</a> -->
+                Yuqi Liu,
+              </span>          
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yiyi Zhou,</a> -->
+                Yiyi Zhou<sup>†</sup>,
+              </span>
+              <span class="author-block">
+                <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Rongrong Ji</a> -->
+                Rongrong Ji
+              </span>
+              </div>
+
+                  <!-- <div class="is-size-5 publication-authors"> -->
+                    <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  <!-- </div> -->
+                  <!-- <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Key Laboratory of Multimedia Trusted Perception and Efficient Computing,
+                      Ministry of Education of China, Xiamen University, China</span>
+                    <span class="author-block"><sup>2</sup>Tencent Youtu Lab</span>
+                  </div> -->
+
+                  <!-- <div class="column has-text-centered">
+                    <div class="publication-links">
+                         ## Arxiv PDF link
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span> 
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/wangzhiyaoo/SVFR" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container">
+    <div class="hero-body">
+      <div class="has-text-centered" style="display: flex; justify-content: center; align-items: center; max-width: 900px; margin: 0 auto;">
+        <p style="margin-top: 0px;">
+          <b>TL;DR:&nbsp;&nbsp;</b>
+          We propose <strong><span style="font-size: 18px;">S</span></strong>table <strong><span style="font-size: 18px;">V</span></strong>ideo <strong><span style="font-size: 18px;">F</span></strong>ace <strong><span style="font-size: 18px;">R</span></strong>estoration, a unified framework for face video restoration that supports tasks such as BFR, Colorization, Inpainting, and their combinations within one cohesive system.
+        </p>
+      </div>
+      <div class="single-image-display" style="width: 100%;">
+        <img src="static/image/proj-task3.png" alt="Task" class="image">
+      </div>
+      <!-- <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+
+        <source src="static/videos/case2_bfr.mp4"
+        type="video/mp4">
+      </video> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video14"  data-slider-index="0" style="width: 100%;">
+          <video poster="" id="video14" autoplay controls muted loop height="400px">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case14_bfr+colorization+inpainting.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video15"  data-slider-index="0" style="width: 100%;">
+          <video poster="" id="video15" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case15_bfr+colorization+inpainting.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1" data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case1_bfr.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2"  data-slider-index="1" style="width: 80%;">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case2_bfr.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case3_bfr.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video4" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case4_bfr.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video5" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case5_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video6"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video6" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case6_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video7"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video7" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case7_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video8"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video8" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case8_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video9"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video9" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case9_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video10"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video10" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case10_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video11" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case11_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video12"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video12" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case12_bfr_colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video13"  data-slider-index="0" style="width: 80%;">
+          <video poster="" id="video13" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/wild-test/case13_bfr+colorization.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+
+      <h2 class="has-text-centered">
+        Restoration results of face videos with inputs from real low-quality data, including visualizations of BFR, BFR+Colorization, and BFR+Colorization+Inpainting.
+        <!-- 1Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+
+
+<!-- <section class="section" align="center">
+  <div class="container is-widescreen">
+    <h2 class="title is-3 no-bottom">Demo</h2>
+      <div class="video-container" align="center">
+        <a onclick="togglePlay()">
+          <video class="video" id="viz_input" loop muted src="./static/videos/case2_bfr.mp4" onloadeddata="initVideo()"></video>
+          <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
+        </a>
+      </div>
+    <div class="video-select">
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/videos/case2_bfr.mp4')"><img src="./static/image/00000001.png"></a>
+    </div>
+  </div>
+</section>
+ -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Face Restoration (FR) is a crucial area within image and video processing, focusing on reconstructing high-quality portraits from degraded inputs. Despite advancements in image FR, video FR remains relatively under-explored, primarily due to challenges related to temporal consistency, motion artifacts, and the limited availability of high-quality video data. Moreover, traditional face restoration typically prioritizes enhancing resolution and may not give as much consideration to related tasks such as facial colorization and inpainting. 
+          </p>
+          <p>
+            In this paper, we propose a novel approach for the Generalized Video Face Restoration (GVFR) task, which integrates video BFR, inpainting, and colorization tasks that we empirically show to benefit each other. We present a unified framework, termed as stable video face restoration (SVFR), which leverages the generative and motion priors of Stable Video Diffusion (SVD) and incorporates task-specific information through a unified face restoration framework. A learnable task embedding is introduced to enhance task identification. Meanwhile, a novel Unified Latent Regularization (ULR) is employed to encourage the shared feature representation learning among different subtasks. To further enhance the restoration quality and temporal stability, we introduce the facial prior learning and the self-referred refinement as auxiliary strategies used for both training and inference. The proposed framework effectively combines the complementary strengths of these tasks, enhancing temporal coherence and achieving superior restoration quality. This work advances the state-of-the-art in video FR and establishes a new paradigm for generalized video face restoration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<script>
+  // Render LaTeX when the page is loaded
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+</script>
+
+<!-- Single Image Display -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <h2 class="title is-3 has-text-centered">Pipeline</h2>
+        <!-- Single image -->
+        <div class="single-image-display">
+          <img src="static/image/method.png" alt="Image Description" class="image">
+          <p>
+            Pipeline of our proposed SVFR. (a) Training pipeline of SVFR: We incorporate task information into the training process using a task embedding approach to enhance unified face restoration. To enhance performance across different tasks, we propose unified latent regularization to effectively aggregate task-specific features, thereby improving the model's performance on various tasks. Additionally, we introduce facial landmark information as an auxiliary guidance to help the model learn structural priors related to human face. Finally, we propose a Self-referred Refinement method that ensures temporal stability. During training, a reference frame is randomly provided, the model will produce consistent results when a reference frame is available. (b) Inference pipeline of SVFR: During inference, we initially generate the first video clip without a reference frame, then select a result frame as the reference image for subsequent video clips.
+          </p>
+        </div>
+
+    </div>
+  </div>
+</section>
+<!-- End single image display -->
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visualization</h2>
+
+      <h3 class="title" style="margin-bottom: 5px;">BFR</h3>
+      <hr class="gray_line">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/bfr01.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/bfr02.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/bfr03.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/bfr04.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/bfr05.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/bfr06.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+
+      <h3 class="title" style="margin-bottom: 5px;">Colorization</h3>
+      <hr class="gray_line">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/color01.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/color02.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/color03.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/color04.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/color05.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/color06.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+
+      <h3 class="title" style="margin-bottom: 5px;">Inpainting</h3>
+      <hr class="gray_line">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/inpainting01.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/inpainting02.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/inpainting03.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video" style="height: 400px;">
+            <source src="static/videos/vfhq-compare/inpainting04.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visualization</h2>
+
+
+      <h3 class="title" style="margin-bottom: 5px;">BFR</h3>
+      <hr class="gray_line">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+1qf8dZpLED0+P2+C1+F5731-5855.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video2" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+88B87CPb6qo+P0+C0+F10741-10848.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+8vcxTHoDadk+P3+C0+F27918-28036.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video4" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+G0DGRma_p48+P0+C0+F11208-11383.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+gsHu2fb3aj0+P0+C0+F17563-17742.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video6" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+JSzFNdp7ruw+P1+C1+F18304-18430.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video7">
+          <video poster="" id="video7" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+KSF3tPr9zAk+P0+C2+F8769-8880.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video8" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+nxMHEN-lqqY+P0+C1+F805-936.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video9">
+          <video poster="" id="video9" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+NZpbTldv8Rk+P2+C0+F34338-34466.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video10" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+o8-8YWCDJt0+P0+C0+F5209-5360.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+okx7B5ggBvo+P0+C0+F3046-3157.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video12" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/bfr/Clip+oVkChb9DyoA+P0+C0+F5884-6070.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <h3 class="title" style="margin-bottom: 5px;">Colorization</h3>
+      <hr class="gray_line">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+2W7Bk7EcRMg+P0+C1+F3663-3770.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video2" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+5FRSvDOczJ8+P0+C0+F302-415.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+gsHu2fb3aj0+P0+C0+F17563-17742.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video4" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+luUVGQKCglM+P0+C1+F4387-4513.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+t5bcnvOMizI+P1+C1+F65074-65320.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video6" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+moIOVVEIffQ+P0+C1+F25505-25726.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video7">
+          <video poster="" id="video7" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+NZpbTldv8Rk+P2+C0+F34338-34466.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video8" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+o8-8YWCDJt0+P0+C0+F5209-5360.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video9">
+          <video poster="" id="video9" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+okx7B5ggBvo+P0+C0+F3046-3157.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video10" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+phGD1zdQ_sQ+P0+C0+F6922-7087.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+RUcLuQ17UV8+P0+C1+F29582-29745.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video12" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/colorization/Clip+syGpm7DM-4g+P3+C2+F20443-20604.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <h3 class="title" style="margin-bottom: 5px;">Inpainting</h3>
+      <hr class="gray_line">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+1qf8dZpLED0+P2+C1+F5731-5855.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video2" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+AuI55Kk5tgw+P0+C1+F3481-3760.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+D4BdpI6h1As+P1+C0+F809-925.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video4" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+DrjdXDaPHgk+P0+C2+F1009-1110.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+floa2dStBxA+P2+C1+F5423-5539.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video6" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+g7Dd3DFXE9I+P0+C0+F8141-8266.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video7">
+          <video poster="" id="video7" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+gsHu2fb3aj0+P0+C0+F17563-17742.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video8" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+NZpbTldv8Rk+P2+C0+F34338-34466.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video9">
+          <video poster="" id="video9" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+okx7B5ggBvo+P0+C0+F3046-3157.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video10" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+oVkChb9DyoA+P0+C0+F5884-6070.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video11">
+          <video poster="" id="video11" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+pBV-jfnfxKM+P0+C1+F5267-5439.mp4" type="video/mp4">
+          </video>
+          <div style="width: 60px; display: inline-block;"></div>
+          <video poster="" id="video12" autoplay controls muted loop class="carousel-video">
+            <source src="static/videos/vfhq_test/inpainting/Clip+syGpm7DM-4g+P0+C0+F15419-15555.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+<style>
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Spread out the videos */
+    gap: 10px; /* Space between videos */
+  }
+
+  .video-item {
+    flex: 1 1 30%; /* Each item takes up 30% of the row, 3 items per row */
+    max-width: 30%; /* Limit the max width */
+    margin-bottom: 5px; /* Add margin to the bottom of each row */
+  }
+
+  .video-item-compare {
+    flex: 1 1 60%; /* Each item takes up 30% of the row, 3 items per row */
+    max-width: 60%; /* Limit the max width */
+    margin-bottom: 5px; /* Add margin to the bottom of each row */
+  }
+
+  .carousel-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the video fits well within the container */
+  }
+
+
+</style>
+
+
+<style>
+  .carousel-video {
+    height: 250px; /* Adjust this value as needed */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the entire video is visible */
+  }
+</style>
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
